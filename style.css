@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background: linear-gradient(to bottom, #120b0a, #2b0f0a, #4a1d14);
+    color: white;
+    line-height: 1.6;
+}
+
+header{
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1614728894747-a83421789f10?q=80&w=1400&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 20px;
+}
+
+header h1{
+    font-size: 80px;
+    color: #ff6b3d;
+    text-shadow: 0 0 20px rgba(255, 107, 61, 0.8);
+}
+
+header p{
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.btn{
+    display: inline-block;
+    padding: 15px 35px;
+    background: #ff6b3d;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background: #ff3d00;
+    transform: scale(1.05);
+}
+
+section{
+    padding: 80px 10%;
+}
+
+section h2{
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ff8c66;
+    font-size: 40px;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card{
+    background: rgba(255,255,255,0.08);
+    padding: 25px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+}
+
+.card h3{
+    margin-bottom: 15px;
+    color: #ffb199;
+}
+
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.gallery img:hover{
+    transform: scale(1.05);
+}
+
+footer{
+    background: #0d0706;
+    text-align: center;
+    padding: 25px;
+    color: #aaa;
+}
+
+@media(max-width: 768px){
+
+    header h1{
+        font-size: 50px;
+    }
+
+    header p{
+        font-size: 18px;
+    }
+
+}
+
+.game-section{
+    text-align: center;
+}
+
+.game-text{
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+#game-area{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 2px solid #ff6b3d;
+
+    background:
+        radial-gradient(white 1px, transparent 1px),
+        radial-gradient(white 2px, transparent 2px),
+        linear-gradient(to bottom, #020111, #0b1f45, #1b2735);
+
+    background-size: 60px 60px, 120px 120px, cover;
+    background-position: 0 0, 30px 30px, center;
+
+    animation: stars 20s linear infinite;
+}
+
+@keyframes stars{
+    from{
+        background-position: 0 0, 30px 30px, center;
+    }
+
+    to{
+        background-position: 0 -200px, 30px -200px, center;
+    }
+}
+
+#mars{
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, #ff6b3d, #a32000);
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(255,107,61,0.8);
+    transition: 0.1s;
+
+    z-index: 10;
+}
+
+#mars:hover{
+    transform: scale(1.1);
+}
+
+#restartBtn{
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    background: #ff6b3d;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#restartBtn:hover{
+    background: #ff3d00;
+    transform: scale(1.05);
+}
+
+#mars{
+    border: 3px solid white;
+}
+
+#game-area{
+    position: relative;
+}
